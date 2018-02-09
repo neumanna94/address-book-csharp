@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using CDOrganizer.Models;
+using Addressbook.Models;
 using System.Collections.Generic;
 
 namespace Addressbook.Controllers
@@ -9,15 +9,12 @@ namespace Addressbook.Controllers
         [HttpPost("/")]
         public ActionResult AddressList()
         {
-            //Request.Form for HttpPost Requests
-            //Request.Query for HttpGet Requests
-            //Use Request. when wanting to get variable information from forms.
             string name = Request.Form["name"];
             string number = Request.Form["number"];
             string email = Request.Form["email"];
             string address = Request.Form["address"];
-            Contact fun = new Contact(name, number, email, address);
-            fun.PushToList();
+            Contact newContact = new Contact(name, number, email, address);
+            newContact.PushToList();
             List<Contact> allContacts = Contact.GetAll();
             return View(allContacts);
         }
@@ -41,9 +38,10 @@ namespace Addressbook.Controllers
             return View();
         }
 
-        [HttpGet("/{id}")]
-        public ActionResult addressDetail(int id){
-            return View(Contact.Find(id));
-        }
+        // [HttpGet("/{id}")]
+        // public ActionResult addressDetail(int id)
+        // {
+        //     return View(Contact.Find(id));
+        // }
     }
 }

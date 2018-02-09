@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System;
-namespace Addressbook.Models;
+namespace Addressbook.Models
 {
     public class Contact
     {
@@ -36,7 +36,7 @@ namespace Addressbook.Models;
         {
             return _address;
         }
-        public string GetId()
+        public int GetId()
         {
             return _id;
         }
@@ -71,9 +71,11 @@ namespace Addressbook.Models;
             if(!checkContact(this)){
                 _allContacts.Add(this);
             }
+
         }
         //Return false if inputContact is not in the list. Return true if inputContact is already in the list.
-        public static bool checkContact(Contact inputContact){
+        public static bool checkContact(Contact inputContact)
+        {
             if(_allContacts.Count == 0)
             {
                 return false;
@@ -96,15 +98,10 @@ namespace Addressbook.Models;
             //If got through entire list and no return happened. Contact must not be in the list.
             return false;
         }
-
-
         //ID Methods
         public static Contact Find(int searchId)
         {
             return _allContacts[searchId-1];
         }
-
-
-
     }
 }

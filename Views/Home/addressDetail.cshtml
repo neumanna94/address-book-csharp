@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+<body>
+    <div ="col-md-12">
+        <h1> All Contacts: </h1>
+        @foreach(var item in Model)
+        {
+            <h4>Name @item.GetName()</h4>
+            <h4>Phone: @item.GetNumber()</h4>
+            <h4>Email: @item.GetEmail()</h4>
+            <h4>Address: @item.GetAddress()<h4>
+        }
+        <button type="button" class="btn btn-dark btn-lg"><a href='/'>New Contact</a></button>
+        <button type="button" class="btn btn-dark btn-lg"><a href='/mymusic/delete'>Delete All Contacts</a></button>
+    </div>
+</body>

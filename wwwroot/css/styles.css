@@ -1,0 +1,13 @@
+
+.jumbotron h1 {
+    text-align: center;
+}
+div#footer {
+    position:fixed;
+    bottom: 0px;
+    left:0px;
+    width:100%;
+    color:black;
+    background:silver;
+    text-align: center;
+}
