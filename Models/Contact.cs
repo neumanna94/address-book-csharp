@@ -86,7 +86,7 @@ namespace Addressbook.Models
                 foreach(Contact index in _allContacts)
                 {
                     //If all properties of inputContact exist anywhere in the list. Return true.
-                    if(index.GetName() == inputContact.GetName() && index.GetNumber() == inputContact.GetNumber() && index.GetEmail() == inputContact.GetNumber() && index.GetAddress() == inputContact.GetAddress())
+                    if(index.GetName() == inputContact.GetName() && index.GetNumber() == inputContact.GetNumber() && index.GetEmail() == inputContact.GetEmail() && index.GetAddress() == inputContact.GetAddress())
                     {
                         return true;
                     }

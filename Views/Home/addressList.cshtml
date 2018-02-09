@@ -2,17 +2,21 @@
   Layout = "_Layout";
 }
 <body>
-    <div ="col-md-12">
+  <div class = "container">
+    <div class = "row">
+      <div class ="col-md-12">
         <h1> All Contacts: </h1>
         <hr></hr>
         @foreach(var item in Model)
         {
-            <h3>Contact<a href='/@item.GetId()'> #@item.GetId()</a></h3>
-            <h4>Name:<a href='/@item.GetId()'> @item.GetName()</a></h4>
-            <hr></hr>
+          <h3>Contact<a href='/@item.GetId()'> #@item.GetId()</a></h3>
+          <h4>Name:<a href='/@item.GetId()'> @item.GetName()</a></h4>
+          <hr></hr>
 
         }
-        <button type="button" class="btn btn-dark btn-lg"><a href='/form'>New Contact</a></button>
-        <button type="button" class="btn btn-dark btn-lg"><a href='/deleteAll'>Delete All Contacts</a></button>
+        <button type="button" class="btn"><a href='/form'>New Contact</a></button>
+        <button type="button" class="btn"><a href='/deleteAll'>Delete All Contacts</a></button>
+      </div>
     </div>
+  </div>
 </body>

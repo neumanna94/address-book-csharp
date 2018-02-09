@@ -1,13 +1,51 @@
-
+.jumbotron {
+    background: #3D9970;
+}
 .jumbotron h1 {
     text-align: center;
+    color: white;
 }
 div#footer {
     position:fixed;
     bottom: 0px;
     left:0px;
     width:100%;
-    color:black;
-    background:silver;
+    color:white;
+    background:#3D9970;
     text-align: center;
+}
+.col-md-12 h1 {
+    color:#3D9970;
+}
+a {
+    color: #3D9970;
+}
+a:hover {
+    color:#01FF70;
+}
+#save {
+    color: white;
+    background: #3D9970;
+    text-decoration: none;
+}
+.form-group {
+    width: 50%;
+}
+.btn {
+    color: white;
+    background: #3D9970;
+    text-decoration: none;
+}
+.btn:hover {
+    color: #01FF70;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    color:#01FF70;
+    text-decoration: none;
 }
