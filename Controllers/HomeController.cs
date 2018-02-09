@@ -38,10 +38,10 @@ namespace Addressbook.Controllers
             return View();
         }
 
-        // [HttpGet("/{id}")]
-        // public ActionResult addressDetail(int id)
-        // {
-        //     return View(Contact.Find(id));
-        // }
+        [HttpGet("/{id}")]
+        public ActionResult addressDetail(int id)
+        {
+            return View(Contact.Find(id));
+        }
     }
 }

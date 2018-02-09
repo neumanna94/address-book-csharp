@@ -4,13 +4,13 @@
 <body>
     <div ="col-md-12">
         <h1> All Contacts: </h1>
+        <hr></hr>
         @foreach(var item in Model)
         {
-            <h3>Contact #@item.GetId()</h3>
-            <h4>Name: @item.GetName()</h4>
-            <h4>Number: @item.GetNumber()</h4>
-            <h4>Email: @item.GetEmail()</h4>
-            <h4>Address: @item.GetAddress()</h4>
+            <h3>Contact<a href='/@item.GetId()'> #@item.GetId()</a></h3>
+            <h4>Name:<a href='/@item.GetId()'> @item.GetName()</a></h4>
+            <hr></hr>
+
         }
         <button type="button" class="btn btn-dark btn-lg"><a href='/form'>New Contact</a></button>
         <button type="button" class="btn btn-dark btn-lg"><a href='/deleteAll'>Delete All Contacts</a></button>
